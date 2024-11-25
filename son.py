@@ -2,7 +2,6 @@ from typing import Optional
 from dataclasses import dataclass
 from datetime import datetime
 import pandas as pd
-import os
 import matplotlib.pyplot as plt
 
 
@@ -397,8 +396,8 @@ class CarbonCalculator:
         """Load and combine city and country comparison data with better error handling."""
         try:
             # Read CSV files without specifying usecols to see what columns are actually present
-            cities_df = pd.read_csv(r"C:\Users\rimap\PycharmProjects\undpmain\Cities.csv")
-            countries_df = pd.read_csv(r"C:\Users\rimap\PycharmProjects\undpmain\Countries.csv")
+            cities_df = pd.read_csv("Cities.csv")
+            countries_df = pd.read_csv("Countries.csv")
 
             # Select and rename columns based on actual column names
             # Modify these column names to match your actual CSV files
